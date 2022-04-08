@@ -68,7 +68,7 @@
               
       $('#searchBar').on('keyup',function(){
         var value = $(this).val().toLowerCase();
-        $("table tr").filter(function(){
+        $("tbody tr").filter(function(){
           $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
         });
       });
@@ -106,7 +106,7 @@
                 datyType:"json",
                 success: function(response){
                   console.log(response.students);
-                  $('tbody').html("");
+                  $('tbody tr').html("");
                   $.each(response.students, function(key, item){
                     $('tbody').append('\
                       <tr>\
