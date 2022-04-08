@@ -16,6 +16,8 @@ use \App\Http\Controllers\StudentController;
 Route::get('student', [StudentController::class,'index']);
 Route::get('fetch-students', [StudentController::class,'fetch']);
 Route::post('student', [StudentController::class,'store']);
+Route::get('edit-student/{id}',[StudentController::class,'edit']);
+Route::put('update-student/{id}',[StudentController::class,'update']);
 
 Route::get('/', function () {
     return view('welcome');
